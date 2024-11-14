@@ -1,0 +1,1 @@
+<?xml version="1.0" encoding="utf-8"?><testclasses><ytsfacades><testclass>com.yts.facades.populators.AcceleratorVariantOptionDataPopulatorTest</testclass><testclass>com.yts.facades.suggestion.impl.DefaultSimpleSuggestionFacadeTest</testclass><testclass>com.yts.facades.suggestion.DefaultSimpleSuggestionFacadeIntegrationTest</testclass></ytsfacades></testclasses>
