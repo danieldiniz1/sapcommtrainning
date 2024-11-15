@@ -312,6 +312,7 @@
     <extension name='ytsfacades'/>
     <extension name='ytsbackoffice'/>
     <extension name='ytsstorefront'/>
+    <extension name="ytsocc"/>
     
   </extensions>
 </hybrisconfig>
