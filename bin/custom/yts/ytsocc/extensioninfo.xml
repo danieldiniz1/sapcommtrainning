@@ -11,7 +11,8 @@
                 		
         
         <requires-extension name="commercewebservices"/>
-                		
+        <requires-extension name="ytsfacades"/>
+
         
         <coremodule generated="true" manager="com.yts.jalo.YtsoccManager" packageroot="com.yts"/>
                 		
