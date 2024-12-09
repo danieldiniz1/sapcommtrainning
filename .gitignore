@@ -125,3 +125,4 @@ base.properties
 **/hybris/data/**
 **/hybris/build/**
 **/hybris/log/**
+**/gensrc/**
