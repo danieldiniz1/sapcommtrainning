@@ -28,6 +28,7 @@ public class InitialDataSystemSetup extends AbstractSystemSetup
 {
 	private static final String IMPORT_CORE_DATA = "importCoreData";
 	private static final String IMPORT_SAMPLE_DATA = "importSampleData";
+	private static final String IMPORT_CUSTOM_DATA = "importCustomData";
 	private static final String ACTIVATE_SOLR_CRON_JOBS = "activateSolrCronJobs";
 
 	private CoreDataImportService coreDataImportService;
@@ -45,6 +46,7 @@ public class InitialDataSystemSetup extends AbstractSystemSetup
 		params.add(createBooleanSystemSetupParameter(IMPORT_CORE_DATA, "Import Core Data", true));
 		params.add(createBooleanSystemSetupParameter(IMPORT_SAMPLE_DATA, "Import Sample Data", true));
 		params.add(createBooleanSystemSetupParameter(ACTIVATE_SOLR_CRON_JOBS, "Activate Solr Cron Jobs", true));
+		params.add(createBooleanSystemSetupParameter(IMPORT_CUSTOM_DATA, "Import Custom Data", true));
 		// Add more Parameters here as you require
 
 		return params;
@@ -93,6 +95,12 @@ public class InitialDataSystemSetup extends AbstractSystemSetup
 		/*
 		 * Add import data for each site you have configured
 		 */
+		createCustomData();
+	}
+
+	private void createCustomData() {
+		getSetupImpexService().importImpexFile("ytsinitialdata/import/custom/essentialdata-bands.impex",Boolean.TRUE);
+		getSetupImpexService().importImpexFile("ytsinitialdata/import/custom/projectdata-bandTour.impex",Boolean.TRUE);
 	}
 
 	public CoreDataImportService getCoreDataImportService()

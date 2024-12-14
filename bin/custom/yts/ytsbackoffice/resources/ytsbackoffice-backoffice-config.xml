@@ -22,6 +22,27 @@
 		</y:actions>
     </context>
 
+	<context merge-by="type" type="Concert" component="editor-area">
+		<editorArea:editorArea>
+			<editorArea:tab name="hmc.tab.concert" position="1">
+				<editorArea:section name="hmc.section.concert.attributes">
+					<editorArea:attribute qualifier="name"/>
+					<editorArea:attribute qualifier="description"/>
+					<editorArea:attribute qualifier="band"/>
+					<editorArea:attribute qualifier="barcodes"/>
+				</editorArea:section>
+			</editorArea:tab>
+		</editorArea:editorArea>
+	</context>
+
+	<context merge-by="module" parent="auto" component="explorer-tree">
+		<explorer-tree:explorer-tree xmlns:explorer-tree="http://www.hybris.com/cockpitng/config/explorertree">
+			<explorer-tree:navigation-node id="hmc.tab.concert" >
+				<explorer-tree:type-node code="Concert" id="hmc.tab.concert"/>
+			</explorer-tree:navigation-node>
+		</explorer-tree:explorer-tree>
+	</context>
+
 	<context merge-by="type" type="Band" component="editor-area">
 		<editorArea:editorArea>
 			<editorArea:tab name="hmc.tab.band" position="1">
