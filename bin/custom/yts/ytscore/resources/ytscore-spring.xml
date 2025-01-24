@@ -546,4 +546,9 @@
 
     </bean>
 
+	<!--	Services-->
+	<alias name="defaultFeatureFlagService" alias="featureFlagService"/>
+	<bean id="defaultFeatureFlagService" class="com.yts.core.service.impl.DefaultFeatureFlagService">
+		<property name="featureFlagDao" ref="featureFlagDao"/>
+	</bean>
 </beans>
