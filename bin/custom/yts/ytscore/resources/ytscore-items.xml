@@ -58,6 +58,7 @@
     <itemtypes>
 
         <!-- Add your item definitions here -->
+        <typegroup name="sap123">
         <itemtype code="Product" generate="true" autocreate="false">
             <attributes>
                 <attribute qualifier="hashtag" type="java.lang.String">
@@ -112,6 +113,33 @@
                 </attribute>
             </attributes>
         </itemtype>
+        </typegroup>
+
+        <typegroup name="Utilities">
+            <itemtype code="FeatureFlag" generate="true" autocreate="true">
+            <description>Feature flag type that contains additional attributes.</description>
+            <deployment table="FeatureFlag" typecode="30267"/>
+                <attributes>
+                    <attribute qualifier="code" type="java.lang.String">
+                        <description>Feature flag code</description>
+                        <persistence type="property"/>
+                    </attribute>
+                    <attribute qualifier="name" type="java.lang.String">
+                        <description>Feature flag name</description>
+                        <persistence type="property"/>
+                    </attribute>
+                    <attribute qualifier="description" type="java.lang.String">
+                        <description>Feature flag description</description>
+                        <persistence type="property"/>
+                    </attribute>
+                    <attribute qualifier="enabled" type="java.lang.Boolean">
+                        <description>Feature flag enabled</description>
+                        <defaultvalue>Boolean.False</defaultvalue>
+                        <persistence type="property"/>
+                    </attribute>
+                </attributes>
+            </itemtype>
+        </typegroup>
 
 
         <!-- TypeGroups are for structure of this file only -->
