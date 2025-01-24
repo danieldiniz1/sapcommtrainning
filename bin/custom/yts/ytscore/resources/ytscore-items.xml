@@ -123,6 +123,7 @@
                     <attribute qualifier="code" type="java.lang.String">
                         <description>Feature flag code</description>
                         <persistence type="property"/>
+                        <modifiers unique="true"/>
                     </attribute>
                     <attribute qualifier="name" type="java.lang.String">
                         <description>Feature flag name</description>
@@ -138,6 +139,11 @@
                         <persistence type="property"/>
                     </attribute>
                 </attributes>
+                <indexes>
+                    <index name="featureFlag_idx">
+                        <key attribute="code"/>
+                    </index>
+                </indexes>
             </itemtype>
         </typegroup>
 

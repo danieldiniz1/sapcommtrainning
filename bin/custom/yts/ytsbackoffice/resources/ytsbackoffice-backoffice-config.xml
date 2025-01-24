@@ -43,6 +43,27 @@
 		</explorer-tree:explorer-tree>
 	</context>
 
+	<context merge-by="module" parent="auto" component="explorer-tree">
+		<explorer-tree:explorer-tree xmlns:explorer-tree="http://www.hybris.com/cockpitng/config/explorertree">
+			<explorer-tree:navigation-node id="hmc.tab.featureflag" >
+				<explorer-tree:type-node code="FeatureFlag" id="hmc.tab.featureflag"/>
+			</explorer-tree:navigation-node>
+		</explorer-tree:explorer-tree>
+	</context>
+
+	<context merge-by="type" type="FeatureFlag" component="editor-area">
+		<editorArea:editorArea>
+			<editorArea:tab name="hmc.tab.featureflag" position="1">
+				<editorArea:section name="hmc.section.featureflag.attributes">
+					<editorArea:attribute qualifier="code"/>
+					<editorArea:attribute qualifier="name"/>
+					<editorArea:attribute qualifier="description"/>
+					<editorArea:attribute qualifier="enabled"/>
+				</editorArea:section>
+			</editorArea:tab>
+		</editorArea:editorArea>
+	</context>
+
 	<context merge-by="type" type="Band" component="editor-area">
 		<editorArea:editorArea>
 			<editorArea:tab name="hmc.tab.band" position="1">
