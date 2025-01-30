@@ -546,9 +546,19 @@
 
     </bean>
 
+	<alias name="defaultBandDao" alias="bandDao"/>
+	<bean id="defaultBandDao" class="com.yts.core.dao.impl.DefaultBandDao" parent="abstractItemDao">
+
+	</bean>
+
 	<!--	Services-->
 	<alias name="defaultFeatureFlagService" alias="featureFlagService"/>
 	<bean id="defaultFeatureFlagService" class="com.yts.core.service.impl.DefaultFeatureFlagService">
 		<property name="featureFlagDao" ref="featureFlagDao"/>
 	</bean>
+
+	<bean id="defaultBandService" class="com.yts.core.service.impl.DefaultBandService">
+		<property name="bandDao" ref="bandDao"/>
+	</bean>
+
 </beans>
