@@ -1,0 +1,4 @@
+INSERT_UPDATE FeatureFlag; code[unique = true]; enabled[default = False]; name           ; description
+                         ; feature0001        ; true                    ; FlagForExample ; feature flag for feature example
+
+

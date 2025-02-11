@@ -1,7 +1,7 @@
 /*
  * ----------------------------------------------------------------
  * --- WARNING: THIS FILE IS GENERATED AND WILL BE OVERWRITTEN! ---
- * --- Generated at 14 de nov. de 2024 11:47:27                 ---
+ * --- Generated at 11 de fev. de 2025 20:04:02                 ---
  * ----------------------------------------------------------------
  */
 package com.yts.facades.constants;
