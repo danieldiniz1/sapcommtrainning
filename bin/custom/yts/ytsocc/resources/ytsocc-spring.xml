@@ -15,4 +15,19 @@
 
     <context:annotation-config/>
 
+	<bean parent="fieldSetLevelMapping" id="ytsBandWsDTOfieldSetLevelMapping">
+		<property name="dtoClass"
+				  value="com.yts.occ.concerttours.dto.BandWsDto" />
+		<property name="levelMapping">
+			<map>
+				<entry key="BASIC"
+					   value="name" />
+				<entry key="DEFAULT"
+					   value="BASIC, description" />
+				<entry key="FULL"
+					   value="DEFAULT, albumsSold,genres,tours" />
+			</map>
+		</property>
+	</bean>
+
 </beans>
