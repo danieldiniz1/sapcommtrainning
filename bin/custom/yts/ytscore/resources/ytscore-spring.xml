@@ -557,6 +557,7 @@
 		<property name="featureFlagDao" ref="featureFlagDao"/>
 	</bean>
 
+	<alias name="defaultBandService" alias="bandService"/>
 	<bean id="defaultBandService" class="com.yts.core.service.impl.DefaultBandService">
 		<property name="bandDao" ref="bandDao"/>
 	</bean>

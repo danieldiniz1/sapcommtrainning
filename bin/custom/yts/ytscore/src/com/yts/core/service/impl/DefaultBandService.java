@@ -20,6 +20,14 @@ public class DefaultBandService implements BandService {
         return bandDao.find();
     }
 
+    @Override
+    public BandModel findBandByName(String name) {
+        return bandDao.findByName(name).orElseThrow(() -> {
+            LOG.error("Band not found");
+            return new RuntimeException("Band not found");
+        });
+    }
+
     public void setBandDao(BandDao bandDao) {
         this.bandDao = bandDao;
     }

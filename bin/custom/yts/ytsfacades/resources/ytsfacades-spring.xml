@@ -182,4 +182,30 @@
 	</bean>
 
 	<bean id="genderData" class="com.yts.facades.product.data.GenderData" scope="prototype"/>
+
+	<!--	custom-->
+	<!--	beans facades-->
+
+	<alias name="defaultBandFacade" alias="bandFacade"/>
+	<bean id="defaultBandFacade" class="com.yts.facades.band.impl.DefaultBandFacade" >
+		<property name="bandService" ref="bandService"/>
+		<property name="bandDataConverter" ref="bandDataConverter"/>
+	</bean>
+
+	<!--	beans populators-->
+
+		<bean id="bandPopulator" class="com.yts.facades.populators.BandPopulator" >
+		</bean>
+
+<!--	beans converters-->
+	<alias name="defaultbandDataConverter" alias="bandDataConverter"/>
+	<bean id="defaultbandDataConverter" parent="abstractPopulatingConverter">
+		<property name="targetClass" value="com.yts.facades.concerttours.data.BandData"/>
+		<property name="populators">
+			<list>
+				<ref bean="bandPopulator"/>
+			</list>
+		</property>
+	</bean>
+
 </beans>

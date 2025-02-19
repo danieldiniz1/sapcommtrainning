@@ -1,0 +1,8 @@
+INSERT_UPDATE OAuthClientDetails; clientId[unique = true]; resourceIds; scope ; authorizedGrantTypes                                         ; authorities ; clientSecret; registeredRedirectUri
+                                ; mobile_android         ; hybris     ; basic ; authorization_code,refresh_token,password,client_credentials ; ROLE_CLIENT ; secret      ; http://localhost:9001/authorizationserver/oauth2_callback
+
+INSERT_UPDATE OAuthClientDetails; clientId[unique = true]; resourceIds; scope ; authorizedGrantTypes                                         ; authorities ; clientSecret; registeredRedirectUri
+                                ; user_id         ; hybris     ; basic ; authorization_code,refresh_token,password,client_credentials ; ROLE_CLIENT ; secret      ; http://localhost:9001/authorizationserver/oauth2_callback
+
+INSERT IntegrationClientCredentialsDetails; clientId[unique = true]; resourceIds; authorities                ; clientSecret; registeredRedirectUri                           ; user(uid)        ; disabled ;
+                                          ; odataIntegration     ; hybris     ; ROLE_INTEGRATIONADMINGROUP ;; https://localhost:9002/oauth2_implicit_callback ; admin ; true ;

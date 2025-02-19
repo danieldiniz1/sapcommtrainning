@@ -7,4 +7,5 @@ import java.util.List;
 public interface BandService {
 
     List<BandModel> findAllBands();
+    BandModel findBandByName(String name);
 }
