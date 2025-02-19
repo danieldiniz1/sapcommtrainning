@@ -17,4 +17,34 @@
 	</bean>
 	-->
 
+	<bean class = "com.yts.occ.concerttours.dto.TourSummaryWsDto">
+		<description >Data object for a tour summary which has no equivalent on the type system</description>
+		<property name = "id" type = "String" />
+		<property name = "tourName" type = "String" />
+		<property name = "numberOfConcerts" type = "String" />
+	</bean>
+	<bean class = "com.yts.occ.concerttours.dto.BandWsDto" >
+		<description>Data object representing a Band</description>
+		<property name = "id" type = "String" />
+		<property name = "name" type = "String" />
+		<property name = "description" type = "String" />
+		<property name = "albumsSold" type = "Long" />
+		<property name = "genres" type="java.util.List&lt;String&gt;"/>
+		<property name = "tours" type="java.util.List&lt;com.yts.occ.concerttours.dto.TourSummaryWsDto&gt;"/>
+	</bean>
+	<bean class = "com.yts.occ.concerttours.dto.ConcertSummaryWsDto">
+		<description >Data object for a concert summary</description>
+		<property name = "id" type = "String" />
+		<property name = "date" type = "java.util.Date" />
+		<property name = "venue" type = "String" />
+		<property name = "type" type = "String" />
+	</bean>
+	<bean class = "com.yts.occ.concerttours.dto.TourWsDto" >
+		<description>Data object representing a tour</description>
+		<property name = "id" type = "String" />
+		<property name = "tourName" type = "String" />
+		<property name = "description" type = "String" />
+		<property name = "concerts" type="java.util.List&lt;com.yts.occ.concerttours.dto.ConcertSummaryWsDto&gt;"/>
+	</bean>
+
 </beans>

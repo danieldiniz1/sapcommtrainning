@@ -17,14 +17,14 @@ public class DefaultBandDao extends AbstractItemDao implements BandDao {
 
     private static final Log LOG = LogFactory.getLog(DefaultBandDao.class);
 
-    private static final StringBuilder BASE_QUERIE = new StringBuilder("SELECT ");
-    private static final StringBuilder FIND_ALL_DATA_FOR_BANDS = BASE_QUERIE.append("* FROM {Band as b} ");
-    private static final StringBuilder FIND_BAND_BY_NAME = FIND_ALL_DATA_FOR_BANDS.append("WHERE {b.name} = ?name");
+    private static final String BASE_QUERIE = "SELECT {pk} FROM {Band as b} ";
+
+    private static final String FIND_BAND_BY_NAME = BASE_QUERIE + "WHERE {b.name} = ?name ";
 
 
     @Override
     public List<BandModel> find() {
-        final FlexibleSearchQuery query = new FlexibleSearchQuery(FIND_ALL_DATA_FOR_BANDS.toString());
+        final FlexibleSearchQuery query = new FlexibleSearchQuery(BASE_QUERIE);
         SearchResult<BandModel> bands = getFlexibleSearchService().search(query);
         if (bands.getResult().isEmpty()) {
             LOG.info("No bands found");
@@ -35,7 +35,7 @@ public class DefaultBandDao extends AbstractItemDao implements BandDao {
 
     @Override
     public Optional<BandModel> findByName(String name) {
-        final FlexibleSearchQuery query = new FlexibleSearchQuery(FIND_BAND_BY_NAME.toString());
+        final FlexibleSearchQuery query = new FlexibleSearchQuery(FIND_BAND_BY_NAME);
         query.addQueryParameter("name", name);
         SearchResult<BandModel> bands = getFlexibleSearchService().search(query);
 
