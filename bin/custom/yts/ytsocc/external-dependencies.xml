@@ -8,4 +8,12 @@
 	<artifactId>ytsocc</artifactId>
 	<version>2211.25</version>
 	<packaging>jar</packaging>
+
+	<dependencies>
+		<dependency>
+			<groupId>io.swagger</groupId>
+			<artifactId>swagger-annotations</artifactId>
+			<version>1.6.2</version>
+		</dependency>
+	</dependencies>
 </project>

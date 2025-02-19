@@ -4,7 +4,13 @@
 --><extensioninfo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="extensioninfo.xsd">
         	
     
-    <extension abstractclassprefix="Generated" classprefix="Ytsocc" description="ytsocc extension" jaloLogicFree="true" managername="YtsoccManager" managersuperclass="de.hybris.platform.jalo.extension.Extension" name="ytsocc">
+    <extension abstractclassprefix="Generated"
+               classprefix="Ytsocc"
+               description="ytsocc extension"
+               jaloLogicFree="true"
+               managername="YtsoccManager"
+               managersuperclass="de.hybris.platform.jalo.extension.Extension"
+               name="ytsocc">
                 		
         
         <!-- you should add all required extensions to this list, except platform extensions which are automatically required -->
@@ -12,6 +18,7 @@
         
         <requires-extension name="commercewebservices"/>
         <requires-extension name="ytsfacades"/>
+        <requires-extension name="b2bocc"/>
 
         
         <coremodule generated="true" manager="com.yts.jalo.YtsoccManager" packageroot="com.yts"/>
